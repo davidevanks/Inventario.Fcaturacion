@@ -125,6 +125,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\modelList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -335,7 +336,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\plugins\Validarcontraseñas\js\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\js\" />
   </ItemGroup>
   <ItemGroup>
@@ -345,6 +345,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\RegistroEmpresa\RegistroEmpresa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventario.Business\Inventario.Business.csproj">
+      <Project>{20db7433-7960-44b5-9219-0d0284766f7a}</Project>
+      <Name>Inventario.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventario.Clients\Inventario.Clients.csproj">
+      <Project>{1d8eda01-29fc-4459-954c-8c94e5c7a150}</Project>
+      <Name>Inventario.Clients</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventario.Entity\Inventario.Entity.csproj">
+      <Project>{9e026bbb-da4d-4551-9ee8-ce3257c5dda2}</Project>
+      <Name>Inventario.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
