@@ -20,10 +20,10 @@ namespace Inventario.Controllers
             bupais = new BUPais();
         }
         // GET: RegistroEmpresa
-        public ActionResult RegistroEmpresa(ENRegistroEmpresa params)
+        public ActionResult RegistroEmpresa(ENRegistroEmpresa paramss)
         {
             string token = "";
-            model.listPais = bupais.listaPaises(params,token);
+            model.listPais = bupais.listaPaises(paramss, token);
 
             return View();
         }

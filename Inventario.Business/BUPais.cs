@@ -19,11 +19,11 @@ namespace Inventario.Business
             client = new Client();
         }
 
-        public List<ResponsePais> listaPaises(ENRegistroEmpresa params, string token)
+        public List<ResponsePais> listaPaises(ENRegistroEmpresa paramss, string token)
         {
             try
             {
-                return JsonConvert.DeserializeObject<List<ResponsePais>>(client.Post<ENRegistroEmpresa>("RegistroEmpresas/listarPaises",params, token));
+                return JsonConvert.DeserializeObject<List<ResponsePais>>(client.Post<ENRegistroEmpresa>("RegistroEmpresas/listarPaises", paramss, token));
             }
             catch (Exception ex)
             {
